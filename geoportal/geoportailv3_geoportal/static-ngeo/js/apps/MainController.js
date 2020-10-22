@@ -233,6 +233,35 @@ function getDefaultMediumStyling() {
 ];
 }
 
+function getDefaultTopoStyling() {
+  const gettext = t => t;
+  return [{
+    label: gettext('Vegetation'),
+    fills: ['lu_landcover_wood','lu_landcover_grass','lu_landuse_stadium','lu_landuse_cemetery'],
+    visible: true
+  },{
+    label: gettext('Buildings'),
+    fillExtrusions: ['lu_building-3d_public','lu_building-3d'],
+    fills: ['lu_building','lu_building_public'],
+    lines: ["lu_bridge_railway","lu_railway","lu_tunnel_railway"],
+    visible: true
+  },{
+    label: gettext('Lieux-dits'),
+    symbols: ['lu_place-label_locality_lieudit'],
+    visible: true
+  },{
+    label: gettext('Courbes de niveaux'),
+    lines: ['lu_contour', 'lu_contour-10', 'lu_contour-20', 'lu_contour-50', 'lu_contour-100'],
+    symbols: ['lu_contour-label-20', 'lu_contour-label-100'],
+    visible: true
+    }, {
+    label: gettext('Hillshade'),
+    hillshades: ['hillshade'],
+    visible: true
+  }
+];
+}
+
 function getSimpleStylings() {
   const gettext = t => t;
   return [
